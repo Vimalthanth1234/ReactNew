@@ -84,8 +84,6 @@ const Home = () => {
             setLoading(false)
         }
         fetchData()
-        // dispatch(getName(''))
-        // dispatch(getPassword(''))
     }, [id, delUrl, callAdd, callEdit])
     return (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
@@ -119,7 +117,7 @@ const Home = () => {
                             <TableCell>{myStates.getDataReducer.title}</TableCell>
                             <TableCell>{myStates.getDataReducer.firstName}</TableCell>
                             <TableCell>{myStates.getDataReducer.lastName}</TableCell>
-                            <TableCell><img src={myStates.getDataReducer.picture} alt /></TableCell>
+                            <TableCell><img src={myStates.getDataReducer.picture} width='100px' height='100px' alt /></TableCell>
                             <TableCell><RemoveRedEyeIcon style={{cursor:'pointer'}} onClick={() => {
                                     dispatch(isOpen(true))
                                     setNewId(myStates.getDataReducer.id)
@@ -134,7 +132,7 @@ const Home = () => {
                                 <TableCell>{ele.title}</TableCell>
                                 <TableCell>{ele.firstName}</TableCell>
                                 <TableCell>{ele.lastName}</TableCell>
-                                <TableCell><img src={ele.picture} alt='user Image' /></TableCell>
+                                <TableCell><img src={ele.picture} alt='user Image' width='100px' height='100px' /></TableCell>
                                 <TableCell><RemoveRedEyeIcon style={{ cursor: 'pointer' }} onClick={() => {
                                     dispatch(isOpen(true))
                                     setNewId(ele.id)

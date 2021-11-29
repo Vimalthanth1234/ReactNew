@@ -14,8 +14,6 @@ const App = () => {
     <div>
         <Routes>
           <Route path='/' element={<SignIn />} />
-          {/* <Route path='/Home' element={myStates.getNameReducer==='admin'&&myStates.getPasswordReducer==='admin'?<Home />:<SignIn />} /> */}
-          {/* <PrivateRoute path='/Home' element={<Home />} /> */}
           <Route exact path='/Home' element={<PrivateRoute/>}>
             <Route exact path='/Home' element={<Home/>}/>
           </Route>
