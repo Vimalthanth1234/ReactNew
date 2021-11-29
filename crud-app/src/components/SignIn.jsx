@@ -26,7 +26,8 @@ const SignIn = () => {
             <TextField style={{margin:'10px',color:'white'}} placeholder='Password' type='password' required onChange={(e)=>{
                 setPassword(e.target.value)
                 }}/>
-            <Link style={{textDecoration:'none',margin:'10px'}} to={name==='admin'&&password==='admin'?'/Home':'/'}><Button style={{backgroundColor:'blue',color:'white',textDecoration:'none'}} type='submit' onClick={()=>{
+            {/* <Link style={{textDecoration:'none',margin:'10px'}} to={name==='admin'&&password==='admin'?'/Home':'/'}><Button style={{backgroundColor:'blue',color:'white',textDecoration:'none'}} type='submit' onClick={()=>{ */}
+            <Link style={{textDecoration:'none',margin:'10px'}} to={'/Home'}><Button style={{backgroundColor:'blue',color:'white',textDecoration:'none'}} type='submit' onClick={()=>{
                 if(name!=='admin'||password!=='admin'){
                     alert('Wrong User Name Or Password')
                 }

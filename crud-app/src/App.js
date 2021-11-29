@@ -6,6 +6,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import PrivateRoute from './components/PrivateRoute';
 
 const App = () => {
   const myStates = useSelector(state=>state)
@@ -13,7 +14,11 @@ const App = () => {
     <div>
         <Routes>
           <Route path='/' element={<SignIn />} />
-          <Route path='/Home' element={myStates.getNameReducer==='admin'&&myStates.getPasswordReducer==='admin'?<Home />:<SignIn />} />
+          {/* <Route path='/Home' element={myStates.getNameReducer==='admin'&&myStates.getPasswordReducer==='admin'?<Home />:<SignIn />} /> */}
+          {/* <PrivateRoute path='/Home' element={<Home />} /> */}
+          <Route exact path='/Home' element={<PrivateRoute/>}>
+            <Route exact path='/Home' element={<Home/>}/>
+          </Route>
         </Routes>
     </div>
   )

@@ -53,7 +53,7 @@ const Home = () => {
     };
     useEffect(() => {
         const fetchData = async () => {
-            const url = id ? `https://dummyapi.io/data/v1/user/${id}` : 'https://dummyapi.io/data/v1/user/'
+            const url = id ? `https://dummyapi.io/data/v1/user/${id}` : 'https://dummyapi.io/data/v1/user/?limit=35'
             if (delUrl) {
                 await axios.delete(`https://dummyapi.io/data/v1/user/${delUrl}`)
                 setLoading(true)
