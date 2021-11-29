@@ -1,0 +1,44 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: turquoise;
+}
+
+table tbody tr td button{
+  background-color: blue;
+  color: white;
+}
+
+.signIn{
+  /* background-image: url('https://ak.picdn.net/shutterstock/videos/22132567/thumb/1.jpg'); */
+  background-image: url('https://t4.ftcdn.net/jpg/01/19/11/55/360_F_119115529_mEnw3lGpLdlDkfLgRcVSbFRuVl6sMDty.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+
+}
+
+.signIn input{
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  border: 0;
+}
+
+.signIn button{
+  border-radius: 10px;
+}
+
+button{
+  color: white !important;
+  background-color: blue !important;
+}
+
+form button{
+  color: white !important;
+}
